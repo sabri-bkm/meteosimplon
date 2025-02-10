@@ -1,0 +1,81 @@
+/* Corps */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #74a9d8, #cfe3fc); /* Dégradé bleu clair */
+}
+
+/* Conteneur principal */
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Limite la taille max pour des écrans larges */
+    transition: transform 0.3s ease; /* Animation de transition */
+}
+
+/* Titre */
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Textes */
+p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Valeurs spécifiques */
+#temperature {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #f39c12; /* Jaune pour la température */
+}
+
+#condition {
+    font-size: 1.5rem;
+    color: #7f8c8d; /* Gris pour les conditions météo */
+}
+
+/* Responsivité pour petits écrans */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Effet au survol */
+.container:hover {
+    transform: scale(1.05); /* Légère animation au survol */
+}
+
+/* Animation de fond (optionnel pour un effet plus dynamique) */
+@keyframes clouds {
+    0% { background: linear-gradient(135deg, #74a9d8, #cfe3fc); }
+    50% { background: linear-gradient(135deg, #a6c0fe, #f68084); }
+    100% { background: linear-gradient(135deg, #74a9d8, #cfe3fc); }
+}
+
+body {
+    animation: clouds 15s ease infinite;
+}
